@@ -193,7 +193,8 @@
 #define USE_MSP_CURRENT_METER
 #endif
 
-#define USE_TRANSPONDER
+// Disabled to make the target fit into flash
+//#define USE_TRANSPONDER
 
 #define ENABLE_BLACKBOX_LOGGING_ON_SDCARD_BY_DEFAULT
 
