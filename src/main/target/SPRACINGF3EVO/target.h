@@ -113,9 +113,8 @@
 #define USE_UART1
 #define USE_UART2
 #define USE_UART3
-// Disabled to make the target fit into flash
-//#define USE_SOFTSERIAL1
-//#define USE_SOFTSERIAL2
+#define USE_SOFTSERIAL1
+#define USE_SOFTSERIAL2
 
 #define SOFTSERIAL1_RX_PIN      PA6 // PWM 5
 #define SOFTSERIAL1_TX_PIN      PA7 // PWM 6
