@@ -122,7 +122,7 @@
 #define SOFTSERIAL2_RX_PIN      PB0 // PWM 7
 #define SOFTSERIAL2_TX_PIN      PB1 // PWM 8
 
-#define SERIAL_PORT_COUNT       4
+#define SERIAL_PORT_COUNT       6
 
 #define USE_ESCSERIAL
 #define ESCSERIAL_TIMER_TX_PIN  PA15  // (HARDARE=0,PPM)
