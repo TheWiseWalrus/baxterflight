@@ -124,6 +124,7 @@
 
 #define SERIAL_PORT_COUNT       6
 
+// Disabled to make the target fit into flash
 //#define USE_ESCSERIAL
 //#define ESCSERIAL_TIMER_TX_PIN  PA15  // (HARDARE=0,PPM)
 
@@ -196,7 +197,7 @@
 // Disabled to make the target fit into flash
 //#define USE_TRANSPONDER
 
-//#define ENABLE_BLACKBOX_LOGGING_ON_SDCARD_BY_DEFAULT
+#define ENABLE_BLACKBOX_LOGGING_ON_SDCARD_BY_DEFAULT
 
 #define DEFAULT_RX_FEATURE      FEATURE_RX_PPM
 #define DEFAULT_FEATURES        (FEATURE_TELEMETRY)
@@ -209,7 +210,7 @@
 #define TARGET_IO_PORTC         (BIT(13)|BIT(14)|BIT(15))
 #define TARGET_IO_PORTF         (BIT(0)|BIT(1)|BIT(4))
 
-#define USABLE_TIMER_CHANNEL_COUNT 8 // UART2 RX/TX, 4 PWM, UART3 RX, LED Strip
+#define USABLE_TIMER_CHANNEL_COUNT 12 // PPM, 8 PWM, UART3 RX/TX, LED Strip
 #ifdef AIORACERF3
 #define USED_TIMERS             (TIM_N(1) | TIM_N(2) | TIM_N(3) | TIM_N(8) | TIM_N(15) | TIM_N(17))
 #else
