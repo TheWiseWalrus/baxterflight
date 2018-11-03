@@ -30,11 +30,11 @@
 
 // Removed to make the firmware fit into flash (in descending order of priority):
 #if !defined(AIORACERF3)
-#undef USE_GYRO_OVERFLOW_CHECK
-#undef USE_GYRO_LPF2
+//#undef USE_GYRO_OVERFLOW_CHECK
+//#undef USE_GYRO_LPF2
 
-#undef USE_RC_SMOOTHING_FILTER
-#undef ITERM_RELAX
+//#undef USE_RC_SMOOTHING_FILTER
+//#undef ITERM_RELAX
 
 #undef USE_MSP_DISPLAYPORT
 #undef USE_MSP_OVER_TELEMETRY
@@ -97,8 +97,8 @@
 #define ACC_MPU6500_ALIGN       CW180_DEG
 #define GYRO_MPU6500_ALIGN      CW180_DEG
 
-#define USE_BARO
-#define USE_BARO_BMP280
+//#define USE_BARO
+//#define USE_BARO_BMP280
 
 #define USE_MAG
 #define USE_MAG_AK8963
@@ -124,8 +124,8 @@
 
 #define SERIAL_PORT_COUNT       6
 
-#define USE_ESCSERIAL
-#define ESCSERIAL_TIMER_TX_PIN  PA15  // (HARDARE=0,PPM)
+//#define USE_ESCSERIAL
+//#define ESCSERIAL_TIMER_TX_PIN  PA15  // (HARDARE=0,PPM)
 
 #define UART1_TX_PIN            PA9
 #define UART1_RX_PIN            PA10
@@ -142,7 +142,7 @@
 
 #define USE_SPI
 #define USE_SPI_DEVICE_1 // PB9,3,4,5 on AF5 SPI1 (MPU)
-#define USE_SPI_DEVICE_2 // PB12,13,14,15 on AF5 SPI2 (SDCard)
+#define USE_SPI_DEVICE_2 // PB12,13,14,15 on AF5 SPI2 (SDCard) There is no SD Card
 
 #define SPI1_NSS_PIN            PB9
 #define SPI1_SCK_PIN            PB3
@@ -196,10 +196,10 @@
 // Disabled to make the target fit into flash
 //#define USE_TRANSPONDER
 
-#define ENABLE_BLACKBOX_LOGGING_ON_SDCARD_BY_DEFAULT
+//#define ENABLE_BLACKBOX_LOGGING_ON_SDCARD_BY_DEFAULT
 
 #define DEFAULT_RX_FEATURE      FEATURE_RX_PPM
-#define DEFAULT_FEATURES        (FEATURE_TRANSPONDER  | FEATURE_RSSI_ADC | FEATURE_TELEMETRY)
+#define DEFAULT_FEATURES        (FEATURE_TELEMETRY)
 
 #define USE_SERIAL_4WAY_BLHELI_INTERFACE
 
@@ -209,9 +209,9 @@
 #define TARGET_IO_PORTC         (BIT(13)|BIT(14)|BIT(15))
 #define TARGET_IO_PORTF         (BIT(0)|BIT(1)|BIT(4))
 
-#define USABLE_TIMER_CHANNEL_COUNT 12 // PPM, 8 PWM, UART3 RX/TX, LED Strip
+#define USABLE_TIMER_CHANNEL_COUNT 8 // UART2 RX/TX, 4 PWM, UART3 RX, LED Strip
 #ifdef AIORACERF3
 #define USED_TIMERS             (TIM_N(1) | TIM_N(2) | TIM_N(3) | TIM_N(8) | TIM_N(15) | TIM_N(17))
 #else
-#define USED_TIMERS             (TIM_N(1) | TIM_N(2) | TIM_N(3) | TIM_N(8) | TIM_N(15) | TIM_N(16))
+#define USED_TIMERS             (TIM_N(1) | TIM_N(2) | TIM_N(8) | TIM_N(15))
 #endif
